@@ -764,6 +764,19 @@ PODS:
     - FirebaseCoreExtension (~> 10.0)
     - FirebaseFirestoreInternal (~> 10.17)
     - FirebaseSharedSwift (~> 10.0)
+  - FirebaseFirestoreAbseilBinary (1.2022062300.0)
+  - FirebaseFirestoreBinary (10.20.0):
+    - FirebaseCore (~> 10.20)
+    - FirebaseCoreExtension (~> 10.20)
+    - FirebaseFirestoreInternalBinary (~> 10.20)
+    - FirebaseSharedSwift (~> 10.20)
+  - FirebaseFirestoreGRPCBoringSSLBinary (1.49.1)
+  - FirebaseFirestoreGRPCCoreBinary (1.49.1):
+    - FirebaseFirestoreAbseilBinary (~> 1.2022062300.0)
+    - FirebaseFirestoreGRPCBoringSSLBinary (~> 1.49.1)
+  - FirebaseFirestoreGRPCCPPBinary (1.49.1):
+    - FirebaseFirestoreAbseilBinary (~> 1.2022062300.0)
+    - FirebaseFirestoreGRPCCoreBinary (~> 1.49.1)
   - FirebaseFirestoreInternal (10.20.0):
     - abseil/algorithm (~> 1.20220623.0)
     - abseil/base (~> 1.20220623.0)
@@ -776,6 +789,12 @@ PODS:
     - FirebaseAppCheckInterop (~> 10.17)
     - FirebaseCore (~> 10.0)
     - "gRPC-C++ (~> 1.49.1)"
+    - leveldb-library (~> 1.22)
+    - nanopb (< 2.30910.0, >= 2.30908.0)
+  - FirebaseFirestoreInternalBinary (10.20.0):
+    - FirebaseCore (~> 10.20)
+    - FirebaseFirestoreAbseilBinary (~> 1.2022062300.0)
+    - FirebaseFirestoreGRPCCPPBinary (~> 1.49.1)
     - leveldb-library (~> 1.22)
     - nanopb (< 2.30910.0, >= 2.30908.0)
   - FirebaseFunctions (10.20.0):
@@ -2083,6 +2102,7 @@ DEPENDENCIES:
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../node_modules/react-native/React/FBReactNativeSpec`)
+  - FirebaseFirestoreBinary (= 10.20.0)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
   - Jet (from `../node_modules/jet`)
@@ -2151,6 +2171,13 @@ DEPENDENCIES:
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
+  https://github.com/paulb777/TestFirebaseBinaryStaging.git:
+    - FirebaseFirestoreAbseilBinary
+    - FirebaseFirestoreBinary
+    - FirebaseFirestoreGRPCBoringSSLBinary
+    - FirebaseFirestoreGRPCCoreBinary
+    - FirebaseFirestoreGRPCCPPBinary
+    - FirebaseFirestoreInternalBinary
   trunk:
     - abseil
     - AppCheckCore
@@ -2357,7 +2384,13 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 7e838abb62ac2e1a1c792cbeb51df3c4b6607f54
   FirebaseDynamicLinks: 61a82d43b81cd74a3cdbb1d65f07fb0241aaa553
   FirebaseFirestore: 21be9ea244830f6cac15464550c2975c43f9dffc
+  FirebaseFirestoreAbseilBinary: bfaea8f46afee1737cfa36bfb2cedca3d6762af3
+  FirebaseFirestoreBinary: 322e38440fc3aadd7d12934678a626777242defa
+  FirebaseFirestoreGRPCBoringSSLBinary: de993f159ad7a27094de7ff8b080730916409990
+  FirebaseFirestoreGRPCCoreBinary: 1beaa77a8fe26e03c8f2e9d40b4b45651e2acbcc
+  FirebaseFirestoreGRPCCPPBinary: 7fa452b2736744dc5d14f1841a9b215bdb93e33b
   FirebaseFirestoreInternal: 0dc0762afd68192e9d45c31d3dd3017accc84333
+  FirebaseFirestoreInternalBinary: 1337255ff452130dd8378056164c854abd74520e
   FirebaseFunctions: 2b6ec69b93c49347025190ccb0a27cdbfd1cad66
   FirebaseInAppMessaging: 1a9bba3e245cb3ff3fe96e828de2932208d6fc65
   FirebaseInstallations: 558b1da7d65afeb996fd5c814332f013234ece4e
@@ -2447,6 +2480,6 @@ SPEC CHECKSUMS:
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 13c8ef87792450193e117976337b8527b49e8c03
 
-PODFILE CHECKSUM: fd2f683bc28d2fe2477257935924fd91d3c54766
+PODFILE CHECKSUM: 769ca25f247a61af8c1a4700dca19df4467a71b5
 
 COCOAPODS: 1.14.3
