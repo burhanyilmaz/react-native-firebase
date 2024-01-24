@@ -74,7 +74,9 @@ target 'testing' do
   # pod 'FirebaseFirestore', :git => 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag => $FirebaseSDKVersion
 
   # Testing https://github.com/invertase/firestore-ios-sdk-frameworks/pull/88
-  pod 'FirebaseFirestoreBinary', $FirebaseSDKVersion
+  # pod 'FirebaseFirestoreBinary', $FirebaseSDKVersion
+  # Testing FlutterFire style of pull 88:
+  pod 'FirebaseFirestore', :git => 'https://github.com/paulb777/firestore-ios-sdk-frameworks.git' #, :tag => $FirebaseSDKVersion
 
   # If leveldb auto-inclusion fails and build fails with leveldb symbol conflicts, use this subspec:
   # pod 'FirebaseFirestore/WithoutLeveldb', :git => 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag => $FirebaseSDKVersion
